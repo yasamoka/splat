@@ -17,29 +17,29 @@ Assuming {file.ext} was 1GB, the "split" command would produce 100 chunks with t
 
 To hash (SHA-1) the produced chunks and produce an info JSON file containing the hashes:
 ```
-import splat
-splat.hash("file_chunk", end_suffix="dw")
+>>> import splat
+>>> splat.hash("file_chunk", end_suffix="dw")
 ```
 
 To specify the info JSON filepath and turn off verbosity:
 ```
-splat.hash("file_chunk", end_suffix="dw", json_filepath="file_info.json", verbose=False)
+>>> splat.hash("file_chunk", end_suffix="dw", json_filepath="file_info.json", verbose=False)
 ```
 
 If the splitter you have used starts at a different suffix but follows an ascending pattern similar to "split", you can also specify the starting suffix:
 ```
-splat.hash("file_chunk", end_suffix="dy", start_suffix="ac")
+>>> splat.hash("file_chunk", end_suffix="dy", start_suffix="ac")
 ```
 
 To validate the received chunks against the hashes contained in the info JSON file:
 ```
-import splat
-splat.validate("file_chunk")
+>>> import splat
+>>> splat.validate("file_chunk")
 ```
 
 Similarly, to specify the info JSON filepath and turn off verbosity:
 ```
-splat.validate("file_chunk", json_filepath="file_info.json", verbose=False)
+>>> splat.validate("file_chunk", json_filepath="file_info.json", verbose=False)
 ```
 
 You can, in a similar fashion, specify the starting suffix if need be.
@@ -55,18 +55,18 @@ splat.validate("file_chunk", stop_at_mismatch=True)
 
 To join the received chunks:
 ```
-import splat
-splat.join("file_chunk", "file.ext")
+>>> import splat
+>>> splat.join("file_chunk", "file.ext")
 ```
 
 Similarly, to specify the info JSON filepath and turn off verbosity:
 ```
-splat.join("file_chunk", "file.ext", json_filepath="file_info.json", verbose=False)
+>>> splat.join("file_chunk", "file.ext", json_filepath="file_info.json", verbose=False)
 ```
 
 To enable hashing as a safety measure (albeit with a potentially visible performance hit) while joining:
 ```
-splat.join("file_chunk", "file.ext", hash=True)
+>>> splat.join("file_chunk", "file.ext", hash=True)
 ```
 
 Joining would stop at the first mismatch detected.
