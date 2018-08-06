@@ -61,7 +61,7 @@ splat.join("file_chunk", "file.ext")
 
 Similarly, to specify the info JSON filepath and turn off verbosity:
 ```
-splat.join("file_chunk", "file.ext", json_filepath="file_info.json", verbosity=False)
+splat.join("file_chunk", "file.ext", json_filepath="file_info.json", verbose=False)
 ```
 
 To enable hashing as a safety measure (albeit with a potentially visible performance hit) while joining:
