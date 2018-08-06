@@ -101,10 +101,7 @@ python3
 
 If validation fails at particular chunks, redownload those chunks and re-validate.
 
-If the validation passes, then to join the chunks:
+If validation passes, then to join the chunks:
 ```
-cd {downloaded chunks path}
-python3
->>> import splat
-splat.join("download_chunk_", "download.bin")
+>>> splat.join("download_chunk_", "download.bin")
 ```
