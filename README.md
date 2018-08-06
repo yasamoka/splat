@@ -79,7 +79,7 @@ mkdir chunks
 split --bytes=10M download.bin chunks/download_chunk_
 ```
 
-200 chunks starting with "download_chunk_aa" and ending by "download_chunk_hs" are created.
+200 chunks starting with "download_chunk_aa" and ending with "download_chunk_hs" are created.
 
 Hashing the chunks:
 ```
